@@ -94,5 +94,27 @@ function neuron_custom_post() {
         'show_ui' => true
     )
 );
+    register_post_type('feature',
+    array(
+        'labels' => array(
+            'name' => __('Features'),
+            'singular_name' => __('Feature')
+        ),
+        'supports' => array('title', 'editor', 'custom-fields', 'thumbnail', 'page-attributes'),
+        'public' => false,
+        'show_ui' => true
+    )
+);
+    register_post_type('service',
+    array(
+        'labels' => array(
+            'name' => __('Services'),
+            'singular_name' => __('Service')
+        ),
+        'supports' => array('title', 'editor', 'custom-fields', 'thumbnail', 'page-attributes'),
+        'public' => false,
+        'show_ui' => true
+    )
+);
 }
 
