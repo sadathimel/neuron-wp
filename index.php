@@ -64,61 +64,10 @@
 		</section><!-- block area end -->
 	
 	
-		<!-- ::::::::::::::::::::: start services section:::::::::::::::::::::::::: -->
-		<section class="section-padding darker-bg">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
-						<div class="template-title text-center">
-							<h2>We Provide Huge Range of Services</h2>
-							<p>Holisticly transform excellent systems rather than collaborative leadership. Credibly pursue compelling outside the box.</p>
-						</div>
-					</div>
-				</div>
-				
-				<div class="row">
-
-					<?php 
-						global $post;
-						$args = array('posts_per_page' => 6, 'post_type' => 'service', 'orderby' => 'menu_order', 'order' => 'ASC');
-						$myposts = get_posts($args);
-						foreach ($myposts as $post) : setup_postdata($post); ?>
-
-						<!-- single service -->
-						<div class="col-sm-6 col-md-4">
-							<div class="services-tiem">
-								<?php the_post_thumbnail( 'thumbnail' , array('class' => 'hvr-buzz-out'));?>
-								<h3><a href="<?php get_post_meta( $post->ID, 'btn_link', true );?>"><?php the_title();?></a></h3>
-								<?php the_content(); ?>
-							</div>
-						</div>
-
-					<?php endforeach; wp_reset_query(); ?>
-
-					
-					
-					
-				</div>
-			</div>
-		</section><!-- end services section -->
+		<?php get_template_part('content/services'); ?>
 	
 
-		<!-- :::::::::::::::::::::  Client Section:::::::::::::::::::::::::: -->
-		<section class="client-logo">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="all-client-logo">
-							<a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/cling-logo/1.jpg" alt="" /></a>
-							<a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/cling-logo/2.jpg" alt="" /></a>
-							<a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/cling-logo/3.jpg" alt="" /></a>
-							<a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/cling-logo/4.jpg" alt="" /></a>
-							<a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/cling-logo/5.jpg" alt="" /></a>
-						</div>
-					</div><!-- /.col-md-12 -->
-				</div><!-- /.row -->
-			</div><!-- /.container -->
-		</section><!-- end client section -->
+		
 		
 	
 		<?php get_footer( ); ?>
