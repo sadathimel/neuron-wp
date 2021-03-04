@@ -1,6 +1,6 @@
 <!-- ::::::::::::::::::::: Footer Section:::::::::::::::::::::::::: -->
 		<footer>
-			<div class="primary-footer">
+			<div class="primary-footer darker-bg">
 				<div class="container">
 					<div class="row">
 						
