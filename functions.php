@@ -122,7 +122,7 @@ function neuron_custom_post() {
             'name' => __('Works'),
             'singular_name' => __('Work')
         ),
-        'supports' => array('title', 'editor', 'custom-fields', 'thumbnail', 'page-attributes'),
+        'supports' => array('title', 'editor', 'thumbnail', 'page-attributes'),
         'public' => true
     )
 );
@@ -207,3 +207,7 @@ function thumbpost_list_shortcode($atts) {
     wp_reset_query();
     return $list;    }
 add_shortcode('thumb_posts', 'thumbpost_list_shortcode');
+
+
+// Including cs framework 
+require get_template_directory() . '/inc/cs-framework/cs-framework.php';
