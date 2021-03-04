@@ -115,6 +115,16 @@ function neuron_custom_post() {
         'public' => false,
         'show_ui' => true
     )
+); 
+    register_post_type('work',
+    array(
+        'labels' => array(
+            'name' => __('Works'),
+            'singular_name' => __('Work')
+        ),
+        'supports' => array('title', 'editor', 'custom-fields', 'thumbnail', 'page-attributes'),
+        'public' => true
+    )
 );
 }
 

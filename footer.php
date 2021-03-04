@@ -1,4 +1,4 @@
-<?php if (!is_page(202)) : ?>
+<?php if (!is_page(array('202','205'))) : ?>
 
 <!-- :::::::::::::::::::::  Client Section:::::::::::::::::::::::::: -->
 	<section class="client-logo">
